@@ -1,5 +1,6 @@
 from functools import lru_cache
 from typing import List, Dict
+import csv
 
 
 @lru_cache
@@ -15,7 +16,17 @@ def read(path: str) -> List[Dict]:
     list
         List of rows as dicts
     """
-    raise NotImplementedError
+
+    with open(path, encoding="utf-8") as file:
+        content = csv.reader(file)
+        keys = next(content)
+        result = []
+        for row in content:
+            dict = {}
+            for i in range(len(keys)):
+                dict[keys[i]] = row[i]
+            result.append(dict)
+        return result
 
 
 def get_unique_job_types(path: str) -> List[str]:
@@ -33,7 +44,19 @@ def get_unique_job_types(path: str) -> List[str]:
     list
         List of unique job types
     """
-    raise NotImplementedError
+    jobs_dict = read(path)
+    jobs_dict_with_only_job_type = [
+        {"job_type": d["job_type"]} for d in jobs_dict
+    ]
+    jobs_dict_with_only_unique_job_type = [
+        dict(t)
+        for t in set([tuple(d.items()) for d in jobs_dict_with_only_job_type])
+    ]
+    job_types_list = [
+        d["job_type"] for d in jobs_dict_with_only_unique_job_type
+    ]
+    print(job_types_list)
+    return job_types_list
 
 
 def filter_by_job_type(jobs: List[Dict], job_type: str) -> List[Dict]:
@@ -51,4 +74,3 @@ def filter_by_job_type(jobs: List[Dict], job_type: str) -> List[Dict]:
     list
         List of jobs with provided job_type
     """
-    raise NotImplementedError
