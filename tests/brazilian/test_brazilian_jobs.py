@@ -55,11 +55,4 @@ def test_brazilian_jobs():
             "type": " full time",
         },
     ]
-    assert (
-        read_brazilian_file(
-            "/Users/joaoguilherme/Documents/projetos/"
-            "sd-023-b-project-job-insights/tests/mocks/"
-            "brazilians_jobs.csv"
-        )
-        == OUTPUT
-    )
+    assert read_brazilian_file("tests/mocks/brazilians_jobs.csv") == OUTPUT
