@@ -6,11 +6,11 @@ The data was extracted from the Glassdoor website and obtained through Kaggle, a
 
 ## Skills used:
 
-Python's interactive terminal.
-Conditional and repetition structures.
-Python built-in functions.
-Exception handling.
-Manipulating files.
-Writing functions.
-Writing tests with Pytest.
-Writing my own modules and importing them into other code.
+* Python's interactive terminal.
+* Conditional and repetition structures.
+* Python built-in functions.
+* Exception handling.
+* Manipulating files.
+* Writing functions.
+* Writing tests with Pytest.
+* Writing my own modules and importing them into other code.
