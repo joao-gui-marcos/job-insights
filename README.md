@@ -1,10 +1,16 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Summary
+
+In this project, I implemente analyses from a dataset about jobs. The implementation was incorporated into a web application developed with Flask (a very popular web framework in the Python community). Tests were written for the implementation of the data analysis.
+
+The data was extracted from the Glassdoor website and obtained through Kaggle, a platform that provides datasets for data scientists.
+
+## Skills used:
+
+Python's interactive terminal.
+Conditional and repetition structures.
+Python built-in functions.
+Exception handling.
+Manipulating files.
+Writing functions.
+Writing tests with Pytest.
+Writing my own modules and importing them into other code.
